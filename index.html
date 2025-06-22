@@ -1,205 +1,250 @@
+<!-- Final Version: FAANG-Ready Animated Portfolio -->
+<!-- All content exactly matches the uploaded resume (not a dot missed) -->
+<!-- Includes advanced glow effects, hover animations, animated header with icons, and resume content -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vijendra Kumar - Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Custom styles for smooth scrolling and font */
-        html {
-            scroll-behavior: smooth;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vijendra Kumar | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            glow: 'glow 2s infinite ease-in-out',
+            fadeInUp: 'fadeInUp 1s ease-out',
+          },
+          keyframes: {
+            glow: {
+              '0%, 100%': { textShadow: '0 0 10px #3b82f6, 0 0 20px #3b82f6' },
+              '50%': { textShadow: '0 0 20px #9333ea, 0 0 30px #9333ea' }
+            },
+            fadeInUp: {
+              from: { opacity: '0', transform: 'translateY(20px)' },
+              to: { opacity: '1', transform: 'translateY(0)' }
+            }
+          }
         }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Custom styles for section titles */
-        .section-title {
-            position: relative;
-            display: inline-block;
-            padding-bottom: 8px; /* Space for the underline */
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #3B82F6; /* Tailwind's blue-500 */
-            border-radius: 9999px; /* Fully rounded line */
-        }
- 
-    </style>
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .glow-text { animation: glow 2s infinite ease-in-out; }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-900 leading-relaxed">
-    <!-- Header/Hero Section -->
-    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16 md:py-24 shadow-lg">
-        <div class="container mx-auto px-4 text-center">
-            <div class="mb-6">
-                <!-- Placeholder image for profile picture -->
-                <img src="https://placehold.co/150x150/ffffff/000000?text=VK" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto border-4 border-white shadow-md object-cover">
-            </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-4">MUMMIDI VIJENDRA KUMAR</h1>
-            <p class="text-xl md:text-2xl font-light mb-8">CSE Student | Web Development & Software Engineering Enthusiast</p>
-            <div class="flex flex-wrap justify-center gap-4 text-lg">
-                <a href="tel:+919059898153" class="flex items-center bg-white text-blue-600 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.774a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
-                    +91 9059898153
-                </a>
-                <a href="mailto:vijsuj137@gmail.com" class="flex items-center bg-white text-blue-600 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                    vijsuj137@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/vijendrakumar-mummidi-843887281" target="_blank" rel="noopener noreferrer" class="flex items-center bg-white text-blue-600 px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition duration-300 ease-in-out">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.3 0H3.7C1.65 0 0 1.65 0 3.7v12.6C0 18.35 1.65 20 3.7 20h12.6c2.05 0 3.7-1.65 3.7-3.7V3.7C20 1.65 18.35 0 16.3 0zM6 17H3V7h3v10zM4.5 5.5c-.83 0-1.5-.67-1.5-1.5S3.67 2.5 4.5 2.5 6 3.17 6 4s-.67 1.5-1.5 1.5zm11.5 11.5h-3v-5c0-1.25-.5-2-1.75-2S10 10.75 10 12v5h-3V7h3v1.5c.67-1.22 1.8-2.17 4.12-2.17C17.16 6.33 19 8.08 19 11.23V17z" clip-rule="evenodd"></path></svg>
-                    LinkedIn
-                </a>
-            </div>
-            <p class="mt-4 text-lg md:text-xl font-light">Pithapuram, Kakinada, Andhra Pradesh, India</p>
-        </div>
-    </header>
+<body class="bg-gray-100 text-gray-900">
 
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 bg-white shadow-md z-50">
-        <div class="container mx-auto px-4 py-3 flex justify-center space-x-6 md:space-x-10 text-gray-700 font-semibold">
-            <a href="#objective" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Objective</a>
-            <a href="#education" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Education</a>
-            <a href="#skills" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Skills</a>
-            <a href="#experience" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Experience</a>
-            <a href="#projects" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Projects</a>
-            <a href="#certifications" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Certifications</a>
-            <a href="#websites" class="hover:text-blue-600 transition duration-300 ease-in-out py-2 px-4 rounded-md hover:bg-blue-50">Websites</a>
-        </div>
+  <!-- Hero Section -->
+  <header class="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-16 text-center">
+    <img src="Profile2.jpg" class="w-36 h-36 rounded-full mx-auto border-4 border-white shadow-md" alt="Profile" />
+    <h1 class="text-4xl md:text-6xl font-extrabold glow-text">MUMMIDI VIJENDRA KUMAR</h1>
+    <p class="text-xl typing mt-2">Web Development & Software Engineering Enthusiast</p>
+    <p class="text-lg mt-2">CSE Student at Aditya College of Engineering Technology</p>
+    <div class="flex justify-center gap-4 mt-4 flex-wrap">
+      <a href="tel:+919059898153" class="bg-white text-blue-600 px-6 py-2 rounded-full shadow hover:bg-gray-100">+91 9059898153</a>
+      <a href="mailto:vijsuj137@gmail.com" class="bg-white text-blue-600 px-6 py-2 rounded-full shadow hover:bg-gray-100">vijsuj137@gmail.com</a>
+      <a href="https://www.linkedin.com/in/vijendrakumar-mummidi-843887281" class="bg-white text-blue-600 px-6 py-2 rounded-full shadow hover:bg-gray-100" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+<!-- Animated Header with Icons -->
+<header class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <h1 class="text-xl md:text-2xl font-bold glow-text"><i class="fas fa-user-graduate mr-2"></i>Mummidi Vijendra Kumar</h1>
+    <nav class="space-x-4 text-lg">
+      <a href="#objective" class="hover:text-yellow-300 transition"><i class="fas fa-bullseye"></i> Objective</a>
+      <a href="#education" class="hover:text-yellow-300 transition"><i class="fas fa-graduation-cap"></i> Education</a>
+      <a href="#skills" class="hover:text-yellow-300 transition"><i class="fas fa-tools"></i> Skills</a>
+      <a href="#projects" class="hover:text-yellow-300 transition"><i class="fas fa-project-diagram"></i> Projects</a>
+      <a href="#certifications" class="hover:text-yellow-300 transition"><i class="fas fa-certificate"></i> Certifications</a>
     </nav>
+  </div>
+</header>
 
-    <main class="container mx-auto px-4 py-8 md:py-12">
-        <!-- Objective Section -->
-        <section id="objective" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Objective</h2>
-            <p class="text-lg text-gray-700">
-                Hello! I'm Mummidi Vijendra Kumar, a passionate Computer Science student with a strong foundation in coding and
-                development. My journey in the tech world began with an interest in programming languages like C, Python, and
-                Java. Over time, I discovered my passion for web development, which led me to specialize in front-end technologies.
-                As I continue to learn and grow, I aim to expand my skills and explore new technologies in both front-end and
-                full-stack development. I'm excited about opportunities that allow me to combine creativity with technical expertise
-                to build solutions that make an impact. Feel free to connect with me if you're interested in collaborating or discussing
-                tech, web development, or coding!
-            </p>
-        </section>
+<main class="container mx-auto px-4 py-12">
+  
+<!-- Objective -->
+<section id="objective" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-8">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-bullseye text-indigo-600"></i> 🎯Objective</h2>
+  <p class="text-gray-800 leading-relaxed">
+    Hello! I’m Mummidi Vijendra Kumar, a passionate Computer Science student with a strong foundation in coding and development.
+      My journey in the tech world began with an interest in programming languages like C, Python, and Java. Over time, I discovered my passion for web development,
+      which led me to specialize in front-end technologies. As I continue to learn and grow, I aim to expand my skills and explore new technologies in both front-end
+      and full-stack development. I’m excited about opportunities that allow me to combine creativity with technical expertise to build solutions that make an impact by applying creativity and technical skills in real-world applications.
+    </p>
+</section>
 
-        <!-- Education Section -->
-        <section id="education" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Education</h2>
-            <div class="space-y-6">
-                <!-- Bachelor's Degree -->
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600">Bachelor of Technology - Computer Science</h3>
-                    <p class="text-gray-800">Aditya College Of Engineering and Technology</p>
-                    <p class="text-gray-600">2024-2027</p>
-                    <p class="text-gray-700">Pursuing with 8.80 CGPA</p>
-                </div>
-                <!-- Diploma -->
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600">Diploma of Education, Communication and Computer Networking</h3>
-                    <p class="text-gray-800">Aditya College Of Engineering and Technology</p>
-                    <p class="text-gray-600">2021-2024</p>
-                    <p class="text-gray-700">Achieved 94.34 percentage, ranking among the top performers in the program</p>
-                </div>
-            </div>
-        </section>
+<!-- Education -->
+<section id="education" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-8">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-graduation-cap text-indigo-600"></i> 🎓Education</h2>
+  <ul class="list-disc pl-6 space-y-2 text-gray-800">
+    <li><strong>B.Tech - Computer Science</strong>, Aditya College Of Engineering and Technology (2024–2027) – CGPA: 8.46</li>
+    <li><strong>Diploma - Communication & Computer Networking</strong> (2021–2024) – 94.34%</li>
+  </ul>
+</section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Web Development Skills -->
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600 mb-3">Web Development</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium shadow-sm">HTML</span>
-                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium shadow-sm">CSS</span>
-                        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium shadow-sm">JavaScript</span>
-                    </div>
-                </div>
-                <!-- Technical Skills -->
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600 mb-3">Technical Skills</h3>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium shadow-sm">Python</span>
-                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium shadow-sm">Java</span>
-                        <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium shadow-sm">C</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<!-- Skills -->
+<section id="skills" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-8">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-tools text-indigo-600"></i> 🛠️Skills</h2>
+  <div class="grid grid-cols-2 gap-4 text-gray-800">
+    <div>
+      <h3 class="font-semibold">Web</h3>
+      <p>HTML, CSS, JavaScript</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Programming Languages</h3>
+      <p>C, C++, Java, Python, SQL</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Operating Systems</h3>
+      <p>Linux, Windows</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Technologies</h3>
+      <p>Machine Learning, Deep Learning, Networking</p>
+    </div>
+    <div>
+      <h3 class="font-semibold">Core Concepts</h3>
+      <p>DSA, OOP, SDLC</p>
+    </div>
+  </div>
+</section>
 
-        <!-- Experience Section -->
-        <section id="experience" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Experience</h2>
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600">Diploma Trainee - Techmind</h3>
-                    <p class="text-gray-800">Rajahmundry, Andhra Pradesh, India</p>
-                    <p class="text-gray-600">December 2023 - April 2024</p>
-                    <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
-                        <li>Developed a basic foundation in Python programming.</li>
-                        <li>Worked on enhancing problem-solving.</li>
-                        <li>Learned industry good practices in coding.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Projects</h2>
-            <div class="space-y-6">
-                <div>
-                    <h3 class="text-xl font-semibold text-blue-600">E-Connect: Interconnected Web Platform</h3>
-                    <p class="text-gray-700 mt-2">
-                        Designed and developed E-Connect, a web-based platform using HTML, CSS, PHP, MYSQL, XAMPP to showcase the interconnection between various sectors (i.e., like agriculture, health, education sectors).
-                    </p>
-                    <p class="text-gray-700 mt-2">
-                        <span class="font-semibold">Achievement:</span> Won 1st Prize in the Poly Veda Tech Fest 2K23 at Aditya College of Engineering Technology, recognizing innovation and technical excellence.
-                    </p>
-                </div>
-            </div>
-        </section>
+  <!-- Projects Section 
+  <section id="projects" class="mb-12">
+    
+    <div class="bg-white shadow-md p-6 rounded-lg">
+      <h2 class="text-3xl font-bold mb-4 section-title">💡 Project</h2>
+      <h3 class="text-xl font-semibold mb-2">Eco-Connect – Interconnected Web Platform</h3>
+      <p class="text-gray-700 mb-2">Aditya College of Engineering and Technology</p>
+      <p class="text-blue-600 mb-2">Live Demo: <a href="https://vijendrakumar-mummidi.github.io/Eco-connect/" target="_blank" class="hover:underline">vijendrakumar-mummidi.github.io/Eco-connect</a></p>
+      <p class="text-green-600 mb-4 font-medium">🏆 1st Prize – PolyVeda Tech Fest 2K23</p>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Developed and deployed a web-based platform that demonstrates the interconnectivity between agriculture, health, and education sectors.</li>
+        <li>Designed a responsive front-end using HTML and CSS with sector-based modular structure to enhance usability and clarity.</li>
+        <li>Built dynamic backend features using PHP and MySQL for efficient content management and user interaction.</li>
+        <li>Tested locally using XAMPP and deployed the front-end on GitHub Pages for live public access.</li>
+        <li>Emphasized accessibility, clean UI, and structured information to raise awareness and promote digital inclusion.</li>
+      </ul>
+      <p class="mt-3 font-semibold">Tech Stack:</p>
+      <p class="text-gray-800">HTML, CSS, PHP, MySQL, XAMPP, GitHub Pages</p>
+    </div>
+  </section>
 
-        <!-- Certifications and Achievements Section -->
-        <section id="certifications" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Certifications & Achievements</h2>
-            <ul class="list-disc list-inside text-gray-700 space-y-2">
-                <li>IT Essentials Certificate Badge - Cisco</li>
-                <li>Completed all 500-difficulty practice problems on CodeChef.</li>
-            </ul>
-        </section>
+ 
+<-- Certifications 
+<section id="certifications" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-8">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-certificate text-indigo-600"></i> 🏆Certifications & Achievements</h2>
+  <ul class="list-disc pl-6 space-y-4 text-gray-800">
+    <li><strong>Getting Started with Artificial Intelligence – IBM SkillsBuild</strong><br>
+      <a href="https://www.credly.com/badges/55d73464-b396-4bca-a840-256bbee2443e/public_url" target="_blank" class="text-blue-600 hover:underline">[Public Badge]</a>
+      <a href="https://github.com/VijendraKumar-Mummidi/Achievements/blob/main/IBMDesign20250618-27-uy8k7h.pdf" target="_blank" class="text-blue-600 hover:underline">[Certificate PDF]</a>
+    </li>
+    <li><strong>IT Essentials Certificate and Badge – Cisco</strong><br>
+      <a href="https://www.credly.com/badges/7b512d1d-af18-4d93-96a7-712862ebb87b/public_url" target="_blank" class="text-blue-600 hover:underline">[Public Badge]</a>
+      <a href="https://github.com/VijendraKumar-Mummidi/Achievements/blob/main/ITEssentialsCertificate.pdf" target="_blank" class="text-blue-600 hover:underline">[Certificate PDF]</a>
+    </li>
+    <li><strong>Completed all 500-difficulty practice problems on CodeChef</strong><br>
+      <a href="https://github.com/VijendraKumar-Mummidi/Achievements/blob/main/much_space_41-500%20difficulty%20rating.pdf" target="_blank" class="text-blue-600 hover:underline">[Certificate PDF]</a>
+    </li>
+  </ul>
+</section>
+ -->
+<!-- Projects -->
+<section id="projects" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-8">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-project-diagram text-indigo-600"></i> Projects</h2>
+  <div>
+    <h3 class="text-xl font-semibold">Eco-Connect: Interconnected Web Platform</h3>
+    
+      <p class="text-gray-700 mb-2">Aditya College of Engineering and Technology</p>
+      <p class="text-blue-600 mb-2">
+        Live Demo: 
+        <a href="https://vijendrakumar-mummidi.github.io/Eco-connect/" target="_blank" class="hover:underline">
+          vijendrakumar-mummidi.github.io/Eco-connect
+        </a>
+      </p>
+      <p class="text-green-600 mb-4 font-medium">🏆 1st Prize – PolyVeda Tech Fest 2K23</p>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Developed and deployed a web-based platform that demonstrates the interconnectivity between agriculture, health, and education sectors.</li>
+        <li>Designed a responsive front-end using HTML and CSS with sector-based modular structure to enhance usability and clarity.</li>
+        <li>Built dynamic backend features using PHP and MySQL for efficient content management and user interaction.</li>
+        <li>Tested locally using XAMPP and deployed the front-end on GitHub Pages for live public access.</li>
+        <li>Emphasized accessibility, clean UI, and structured information to raise awareness and promote digital inclusion.</li>
+      </ul>
+      <p class="mt-3 font-semibold">Tech Stack:</p>
+      <p class="text-gray-800">HTML, CSS, PHP, MySQL, XAMPP, GitHub Pages</p>
+    </div>
+</section>
+  <!-- Projects Section 
+  <section id="projects" class="mb-12 max-w-4xl mx-auto mt-10 px-4">
+    <div class="bg-white shadow-md p-6 rounded-lg">
+      <h2 class="text-3xl font-bold mb-4 section-title">💡 Project</h2>
+      <h3 class="text-xl font-semibold mb-2">Eco-Connect – Interconnected Web Platform</h3>
+      <p class="text-gray-700 mb-2">Aditya College of Engineering and Technology</p>
+      <p class="text-blue-600 mb-2">
+        Live Demo: 
+        <a href="https://vijendrakumar-mummidi.github.io/Eco-connect/" target="_blank" class="hover:underline">
+          vijendrakumar-mummidi.github.io/Eco-connect
+        </a>
+      </p>
+      <p class="text-green-600 mb-4 font-medium">🏆 1st Prize – PolyVeda Tech Fest 2K23</p>
+      <ul class="list-disc list-inside space-y-1 text-gray-700">
+        <li>Developed and deployed a web-based platform that demonstrates the interconnectivity between agriculture, health, and education sectors.</li>
+        <li>Designed a responsive front-end using HTML and CSS with sector-based modular structure to enhance usability and clarity.</li>
+        <li>Built dynamic backend features using PHP and MySQL for efficient content management and user interaction.</li>
+        <li>Tested locally using XAMPP and deployed the front-end on GitHub Pages for live public access.</li>
+        <li>Emphasized accessibility, clean UI, and structured information to raise awareness and promote digital inclusion.</li>
+      </ul>
+      <p class="mt-3 font-semibold">Tech Stack:</p>
+      <p class="text-gray-800">HTML, CSS, PHP, MySQL, XAMPP, GitHub Pages</p>
+    </div>
+  </section> -->
 
-        <!-- Websites Section -->
-        <section id="websites" class="bg-white p-8 rounded-lg shadow-md mb-8 md:mb-12">
-            <h2 class="text-3xl font-bold mb-6 section-title">Online Profiles</h2>
-            <div class="flex flex-wrap gap-4 text-lg">
-                <a href="https://www.codechef.com/users/much pace41" target="_blank" rel="noopener noreferrer" class="flex items-center bg-purple-100 text-purple-800 px-6 py-3 rounded-full shadow-md hover:bg-purple-200 transition duration-300 ease-in-out">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M10 0a10 10 0 1010 10A10 10 0 0010 0zm0 18a8 8 0 118-8 8 8 0 01-8 8zm4-10a1 1 0 00-1-1H7a1 1 0 000 2h6a1 1 0 001-1z"></path></svg>
-                    CodeChef
-                </a>
-                <a href="https://www.linkedin.com/in/vijendrakumar-mummidi-843887281" target="_blank" rel="noopener noreferrer" class="flex items-center bg-blue-100 text-blue-800 px-6 py-3 rounded-full shadow-md hover:bg-blue-200 transition duration-300 ease-in-out">
-                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.3 0H3.7C1.65 0 0 1.65 0 3.7v12.6C0 18.35 1.65 20 3.7 20h12.6c2.05 0 3.7-1.65 3.7-3.7V3.7C20 1.65 18.35 0 16.3 0zM6 17H3V7h3v10zM4.5 5.5c-.83 0-1.5-.67-1.5-1.5S3.67 2.5 4.5 2.5 6 3.17 6 4s-.67 1.5-1.5 1.5zm11.5 11.5h-3v-5c0-1.25-.5-2-1.75-2S10 10.75 10 12v5h-3V7h3v1.5c.67-1.22 1.8-2.17 4.12-2.17C17.16 6.33 19 8.08 19 11.23V17z" clip-rule="evenodd"></path></svg>
-                    LinkedIn
-                </a>
-            </div>
-        </section>
-    </main>
+  <!-- Certifications -->
+  <section id="certifications" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-12 px-4">
+    <h2 class="text-2xl font-bold mb-4"><i class="fas fa-certificate text-indigo-600"></i> 🏆 Certifications & Achievements</h2>
+    <ul class="list-disc pl-6 space-y-4 text-gray-800">
+      <li>
+        <strong>Getting Started with Artificial Intelligence – IBM SkillsBuild</strong><br>
+        <a href="https://www.credly.com/badges/55d73464-b396-4bca-a840-256bbee2443e/public_url" target="_blank" class="text-blue-600 hover:underline">[Public Badge]</a>
+        <a href="https://github.com/VijendraKumar-Mummidi/Achievements/blob/main/IBMDesign20250618-27-uy8k7h.pdf" target="_blank" class="text-blue-600 hover:underline">[Certificate PDF]</a>
+      </li>
+      <li>
+        <strong>IT Essentials Certificate and Badge – Cisco</strong><br>
+        <a href="https://www.credly.com/badges/7b512d1d-af18-4d93-96a7-712862ebb87b/public_url" target="_blank" class="text-blue-600 hover:underline">[Public Badge]</a>
+        <a href="https://github.com/VijendraKumar-Mummidi/Achievements/blob/main/ITEssentialsCertificate.pdf" target="_blank" class="text-blue-600 hover:underline">[Certificate PDF]</a>
+      </li>
+      <li>
+        <strong>Completed all 500-difficulty practice problems on CodeChef</strong><br>
+        <a href="https://github.com/VijendraKumar-Mummidi/Achievements/blob/main/much_space_41-500%20difficulty%20rating.pdf" target="_blank" class="text-blue-600 hover:underline">[Certificate PDF]</a>
+      </li>
+    </ul>
+  </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 text-center">
-        <div class="container mx-auto px-4">
-            <p>&copy; 2024 Mummidi Vijendra Kumar. All rights reserved.</p>
-            <p class="mt-2 text-sm">Built with HTML and Tailwind CSS.</p>
-        </div>
-    </footer>
+
+<!-- Online Profiles -->
+<section id="profiles" class="bg-white p-6 shadow-lg rounded-lg max-w-4xl mx-auto mb-12">
+  <h2 class="text-2xl font-bold mb-4"><i class="fas fa-globe text-indigo-600"></i> 🌐Online Profiles</h2>
+  <ul class="list-disc pl-6 space-y-2">
+    <li><a href="https://www.codechef.com/users/much_space41" target="_blank" class="text-blue-600 hover:underline">CodeChef</a></li>
+    <li><a href="https://www.linkedin.com/in/vijendrakumar-mummidi-843887281" target="_blank" class="text-blue-600 hover:underline">LinkedIn</a></li>
+    <li><a href="https://vijendra-portfolio.vercel.app" target="_blank" class="text-blue-600 hover:underline">Portfolio Website</a></li>
+  </ul>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="text-center py-6 bg-gray-900 text-white">
+  <p>&copy; 2024 Mummidi Vijendra Kumar. Built with ❤️ using HTML, CSS, and JavaScript</p>
+</footer>
+
+</main>
 </body>
 </html>
